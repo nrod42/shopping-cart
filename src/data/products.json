@@ -1,0 +1,86 @@
+[
+    { 
+        "id": 1, 
+        "title": "Books", 
+        "price": 2222, 
+        "imgUrl": "/imgs/books.jpg" 
+    },
+    { 
+        "id": 2, 
+        "title": "Bulb", 
+        "price": 2222, 
+        "imgUrl": "/imgs/bulb.jpg" 
+    },
+    { 
+        "id": 3, 
+        "title": "Chess", 
+        "price": 2222, 
+        "imgUrl": "/imgs/chess.jpg" 
+    },
+    { 
+        "id": 4, 
+        "title": "Coffee", 
+        "price": 2222, 
+        "imgUrl": "/imgs/coffee.jpg"
+    },
+    { 
+        "id": 5, 
+        "title": "Lens", 
+        "price": 2222, 
+        "imgUrl": "/imgs/lens.jpg" 
+    },
+    { 
+        "id": 6, 
+        "title": "Jeans", 
+        "price": 2222, 
+        "imgUrl": "/imgs/jeans.jpg" 
+    },
+    { 
+        "id": 7, 
+        "title": "Computer", 
+        "price": 2222, 
+        "imgUrl": "/imgs/computer.jpg" 
+    },
+    { 
+        "id": 8, 
+        "title": "Bulb", 
+        "price": 2222, 
+        "imgUrl": "/imgs/bulb.jpg" 
+    },
+    { 
+        "id": 9, 
+        "title": "Chess", 
+        "price": 2222, 
+        "imgUrl": "/imgs/chess.jpg" 
+    },
+    { 
+        "id": 10, 
+        "title": "Coffee", 
+        "price": 2222, 
+        "imgUrl": "/imgs/coffee.jpg"
+    },
+    { 
+        "id": 11, 
+        "title": "Lens", 
+        "price": 2222, 
+        "imgUrl": "/imgs/lens.jpg" 
+    },
+    { 
+        "id": 12, 
+        "title": "Jeans", 
+        "price": 2222, 
+        "imgUrl": "/imgs/jeans.jpg" 
+    },
+    { 
+        "id": 13, 
+        "title": "Computer", 
+        "price": 2222, 
+        "imgUrl": "/imgs/computer.jpg" 
+    },
+    { 
+        "id": 14, 
+        "title": "Whiskey", 
+        "price": 2222, 
+        "imgUrl": "/imgs/whiskey.jpg" 
+    }
+]
