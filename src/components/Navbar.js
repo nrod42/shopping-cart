@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { CartContext } from "../App";
+import CardItem from "./CartItem";
 import {
   Container,
   Offcanvas,
@@ -10,13 +11,13 @@ import {
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const { cart, setCart } = useContext(CartContext);
+  const { cart } = useContext(CartContext);
 
   //Bootstrap offcanvas states
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  
   return (
     <NavbarBs
       sticky="top"
@@ -78,10 +79,10 @@ const Navbar = () => {
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Shopping Cart</Offcanvas.Title>
           </Offcanvas.Header>
-          <Offcanvas.Body>
-            Some text as placeholder. In real life you can have the elements you
-            have chosen. Like, text, images, lists, etc.
+          <Offcanvas.Body style={{display: 'flex', flexDirection: 'column', gap: '20px'}}>
+            {cart.length === 0 ? 'Empty' : cart.map((item) => <CardItem item={item} />)} 
           </Offcanvas.Body>
+          <div style={{padding: '10px', textAlign: 'center'}}><Button variant="success">Checkout</Button></div>
         </Offcanvas>
       </Container>
     </NavbarBs>

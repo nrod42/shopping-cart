@@ -1,20 +1,16 @@
 import React, { useContext } from "react";
 import { CartContext } from "../App";
-import products from "../data/products.json";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
 const ItemCard = ({ id, title, price, imgUrl }) => {
-  const { cart, setCart } = useContext(CartContext);
+  const { setCart } = useContext(CartContext);
 
   const formatCurrency = new Intl.NumberFormat(undefined, {
     currency: "USD",
     style: "currency",
   });
 
-  // when add to cart is clicked,
-  // if already there, add 1 to quant
-  //if none found in cart, add new object with id and qunt which is equal to 1
   const addToCart = () => {
     setCart((currentItems) => {
       if (currentItems.find((item) => item.id === id) == null) {
@@ -29,7 +25,6 @@ const ItemCard = ({ id, title, price, imgUrl }) => {
         });
       }
     });
-    console.log(cart);
   };
 
   return (
