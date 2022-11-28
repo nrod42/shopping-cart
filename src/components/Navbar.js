@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import { CartContext } from "../App";
-import { NavLink } from "react-router-dom";
 import products from "../data/products.json";
 import CardItem from "./CartItem";
 import {
@@ -10,7 +9,7 @@ import {
   Nav,
   Navbar as NavbarBs,
 } from "react-bootstrap";
-// import ;
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const { cart } = useContext(CartContext);
@@ -33,13 +32,13 @@ const Navbar = () => {
     >
       <Container>
         <Nav className="me-auto">
-          <Nav.Link to="/shopping-cart" as={NavLink}>
+          <Nav.Link to="/" as={NavLink}>
             Home
           </Nav.Link>
-          <Nav.Link to="/shopping-cart/store" as={NavLink}>
+          <Nav.Link to="/store" as={NavLink}>
             Store
           </Nav.Link>
-          <Nav.Link to="/shopping-cart/about" as={NavLink}>
+          <Nav.Link to="/about" as={NavLink}>
             About
           </Nav.Link>
         </Nav>
@@ -55,7 +54,7 @@ const Navbar = () => {
           onClick={handleShow}
         >
           <img
-            src="./imgs/shoppingCart.svg"
+            src="/imgs/shoppingCart.svg"
             alt={"shopping cart button"}
             style={{ height: "1.8rem" }}
           ></img>
