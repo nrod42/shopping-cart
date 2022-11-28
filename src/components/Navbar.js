@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { CartContext } from "../App";
+import products from "../data/products.json"
 import CardItem from "./CartItem";
 import {
   Container,
@@ -13,11 +14,17 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const { cart } = useContext(CartContext);
 
+  const formatCurrency = new Intl.NumberFormat(undefined, {
+    currency: "USD",
+    style: "currency",
+  });
+
   //Bootstrap offcanvas states
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   
+
   return (
     <NavbarBs
       sticky="top"
@@ -74,7 +81,6 @@ const Navbar = () => {
           show={show}
           onHide={handleClose}
           placement="end"
-          // scroll="false"
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Shopping Cart</Offcanvas.Title>
@@ -82,6 +88,7 @@ const Navbar = () => {
           <Offcanvas.Body style={{display: 'flex', flexDirection: 'column', gap: '20px'}}>
             {cart.length === 0 ? 'Empty' : cart.map((item) => <CardItem item={item} />)} 
           </Offcanvas.Body>
+          <div>{formatCurrency.format(cart.reduce((total, current) => total + products.find(item => item.id === current.id).price * current.quantity, 0))}</div>
           <div style={{padding: '10px', textAlign: 'center'}}><Button variant="success">Checkout</Button></div>
         </Offcanvas>
       </Container>
