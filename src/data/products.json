@@ -3,84 +3,84 @@
         "id": 1, 
         "title": "Books", 
         "price": 1000, 
-        "imgUrl": "/imgs/books.jpg" 
+        "imgUrl": "./imgs/books.jpg" 
     },
     { 
         "id": 2, 
         "title": "Bulb", 
         "price": 1000, 
-        "imgUrl": "/imgs/bulb.jpg" 
+        "imgUrl": "./imgs/bulb.jpg" 
     },
     { 
         "id": 3, 
         "title": "Chess", 
         "price": 1000, 
-        "imgUrl": "/imgs/chess.jpg" 
+        "imgUrl": "./imgs/chess.jpg" 
     },
     { 
         "id": 4, 
         "title": "Coffee", 
         "price": 1000, 
-        "imgUrl": "/imgs/coffee.jpg"
+        "imgUrl": "./imgs/coffee.jpg"
     },
     { 
         "id": 5, 
         "title": "Lens", 
         "price": 1000, 
-        "imgUrl": "/imgs/lens.jpg" 
+        "imgUrl": "./imgs/lens.jpg" 
     },
     { 
         "id": 6, 
         "title": "Jeans", 
         "price": 1000, 
-        "imgUrl": "/imgs/jeans.jpg" 
+        "imgUrl": "./imgs/jeans.jpg" 
     },
     { 
         "id": 7, 
         "title": "Computer", 
         "price": 1000, 
-        "imgUrl": "/imgs/computer.jpg" 
+        "imgUrl": "./imgs/computer.jpg" 
     },
     { 
         "id": 8, 
         "title": "Bulb", 
         "price": 1000, 
-        "imgUrl": "/imgs/bulb.jpg" 
+        "imgUrl": "./imgs/bulb.jpg" 
     },
     { 
         "id": 9, 
         "title": "Chess", 
         "price": 1000, 
-        "imgUrl": "/imgs/chess.jpg" 
+        "imgUrl": "./imgs/chess.jpg" 
     },
     { 
         "id": 10, 
         "title": "Coffee", 
         "price": 1000, 
-        "imgUrl": "/imgs/coffee.jpg"
+        "imgUrl": "./imgs/coffee.jpg"
     },
     { 
         "id": 11, 
         "title": "Lens", 
         "price": 1000, 
-        "imgUrl": "/imgs/lens.jpg" 
+        "imgUrl": "./imgs/lens.jpg" 
     },
     { 
         "id": 12, 
         "title": "Jeans", 
         "price": 1000, 
-        "imgUrl": "/imgs/jeans.jpg" 
+        "imgUrl": "./imgs/jeans.jpg" 
     },
     { 
         "id": 13, 
         "title": "Computer", 
         "price": 1000, 
-        "imgUrl": "/imgs/computer.jpg" 
+        "imgUrl": "./imgs/computer.jpg" 
     },
     { 
         "id": 14, 
         "title": "Whiskey", 
         "price": 1000, 
-        "imgUrl": "/imgs/whiskey.jpg" 
+        "imgUrl": "./imgs/whiskey.jpg" 
     }
 ]

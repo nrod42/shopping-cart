@@ -17,12 +17,22 @@ function App() {
         <Navbar />
         <Container className="mb-5">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/store" element={<Store />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/shopping-cart" element={<Home />} />
+            <Route path="/shopping-cart/store" element={<Store />} />
+            <Route path="/shopping-cart/about" element={<About />} />
           </Routes>
         </Container>
-        <footer className="mb-0 mt-auto"><span style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>(C) 2022 - Nigel Rodriguez</span></footer>
+        <footer className="mb-0 mt-auto">
+          <span
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            © 2022 - Nigel Rodriguez
+          </span>
+        </footer>
       </CartContext.Provider>
     </div>
   );
