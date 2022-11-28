@@ -32,13 +32,13 @@ const Navbar = () => {
     >
       <Container>
         <Nav className="me-auto">
-          <Nav.Link to="/" as={NavLink}>
+          <Nav.Link to="/shopping-cart" as={NavLink}>
             Home
           </Nav.Link>
-          <Nav.Link to="/store" as={NavLink}>
+          <Nav.Link to="/shopping-cart/store" as={NavLink}>
             Store
           </Nav.Link>
-          <Nav.Link to="/about" as={NavLink}>
+          <Nav.Link to="/shopping-cart/about" as={NavLink}>
             About
           </Nav.Link>
         </Nav>
@@ -54,7 +54,7 @@ const Navbar = () => {
           onClick={handleShow}
         >
           <img
-            src="/imgs/shoppingCart.svg"
+            src="./imgs/shoppingCart.svg"
             alt={"shopping cart button"}
             style={{ height: "1.8rem" }}
           ></img>
