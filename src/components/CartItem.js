@@ -1,5 +1,6 @@
-// import { CartContext } from "../App";
+import { Button } from "react-bootstrap";
 import products from "../data/products.json";
+import formatCurrency from "../functions/formatCurrency";
 
 const CardItem = (props) => {
   const { id, quantity } = props.item;
@@ -8,22 +9,32 @@ const CardItem = (props) => {
     (product) => product.id === id
   );
 
-  const formatCurrency = new Intl.NumberFormat(undefined, {
-    currency: "USD",
-    style: "currency",
-  });
-
-  const mainStyle = {
-    display: "flex",
-    alignItem: "center",
-    justifyContent: "flex-start",
+  const containerStyle = {
+    display: "grid",
+    gridTemplateColumns: "1fr 3fr 1fr",
     gap: "1rem",
+    alignItems: "start",
+    justifyContent: "start",
   };
-  const imgStyle = { height: "100px", width: "100px" };
+
+  const imgStyle = {
+    height: "100%",
+    width: "100%",
+    borderRadius: "5px",
+  };
+
+  const delBtnStyle = {
+    height: "2.5rem",
+    width: "2.5rem",
+    placeSelf: "center",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  };
 
   return (
-    <div style={mainStyle}>
-      <div>
+    <div style={containerStyle}>
+      <div style={{ height: "100px", width: "100px", borderRadius: "5px" }}>
         <img style={imgStyle} src={imgUrl} alt={title} />
       </div>
       <div>
@@ -36,9 +47,16 @@ const CardItem = (props) => {
           }}
         >
           <div>Qty: {quantity}</div>
-          <div>{formatCurrency.format(price * quantity)}</div>
+          <div>{formatCurrency(price * quantity)}</div>
         </div>
       </div>
+      <Button variant="danger" style={delBtnStyle}>
+        <img
+          src="./imgs/trash.svg"
+          alt="delete button"
+          style={{ height: "1.5rem" }}
+        ></img>
+      </Button>
     </div>
   );
 };

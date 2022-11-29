@@ -1,15 +1,11 @@
 import React, { useContext } from "react";
 import { CartContext } from "../App";
+import formatCurrency from "../functions/formatCurrency";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
 const ItemCard = ({ id, title, price, imgUrl }) => {
   const { setCart } = useContext(CartContext);
-
-  const formatCurrency = new Intl.NumberFormat(undefined, {
-    currency: "USD",
-    style: "currency",
-  });
 
   const addToCart = () => {
     setCart((currentItems) => {
@@ -27,6 +23,12 @@ const ItemCard = ({ id, title, price, imgUrl }) => {
     });
   };
 
+  // const removeFromCart = () {
+  //   setCart((currentItems) => {
+  //     if (currentItems.find((item) => item.id === id))
+  //   })
+  // }
+
   return (
     <Card>
       <Card.Img
@@ -39,10 +41,15 @@ const ItemCard = ({ id, title, price, imgUrl }) => {
         <Card.Title className="d-flex justify-content-between align-items-center mb-4">
           <span className="fs-2">{title}</span>
           <span className="ms-2" style={{ color: "gray" }}>
-            {formatCurrency.format(price)}
+            {formatCurrency(price)}
           </span>
         </Card.Title>
-        <Button onClick={addToCart}>Add To Cart</Button>
+        <Button
+          style={{ background: "#912F40", border: "1px solid #912F40" }}
+          onClick={addToCart}
+        >
+          Add To Cart
+        </Button>
       </Card.Body>
     </Card>
   );
