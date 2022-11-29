@@ -50,6 +50,7 @@ const CardItem = (props) => {
           <div>{formatCurrency(price * quantity)}</div>
         </div>
       </div>
+
       <Button variant="danger" style={delBtnStyle}>
         <img
           src="./imgs/trash.svg"

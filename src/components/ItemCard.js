@@ -1,20 +1,27 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../App";
 import formatCurrency from "../functions/formatCurrency";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
 const ItemCard = ({ id, title, price, imgUrl }) => {
-  const { setCart } = useContext(CartContext);
+  const { cart, setCart } = useContext(CartContext);
 
-  const addToCart = () => {
+  const [itemQty, setItemQty] = useState("1");
+
+  // when rerender, qty amount dissappears...do we care?
+  // useEffect(() => {
+  //   setItemQty(cart.find((item) => item.id === id)?.quantity);
+  // }, [cart, id]);
+
+  const addToCart = (quantity) => {
     setCart((currentItems) => {
       if (currentItems.find((item) => item.id === id) == null) {
-        return [...currentItems, { id, quantity: 1 }];
+        return [...currentItems, { id, quantity: quantity }];
       } else {
         return currentItems.map((item) => {
           if (item.id === id) {
-            return { ...item, quantity: item.quantity + 1 };
+            return { ...item, quantity: quantity };
           } else {
             return item;
           }
@@ -23,11 +30,14 @@ const ItemCard = ({ id, title, price, imgUrl }) => {
     });
   };
 
-  // const removeFromCart = () {
-  //   setCart((currentItems) => {
-  //     if (currentItems.find((item) => item.id === id))
-  //   })
-  // }
+  const handleQtyChange = (e) => {
+    setItemQty(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    addToCart(parseInt(itemQty));
+  };
 
   return (
     <Card>
@@ -38,18 +48,34 @@ const ItemCard = ({ id, title, price, imgUrl }) => {
         style={{ objectFit: "cover" }}
       />
       <Card.Body className="d-flex flex-column">
-        <Card.Title className="d-flex justify-content-between align-items-center mb-4">
-          <span className="fs-2">{title}</span>
+        <Card.Title className="d-flex flex-wrap justify-content-between align-items-center mb-4">
+          <span className="fs-4">{title}</span>
           <span className="ms-2" style={{ color: "gray" }}>
             {formatCurrency(price)}
           </span>
         </Card.Title>
-        <Button
-          style={{ background: "#912F40", border: "1px solid #912F40" }}
-          onClick={addToCart}
+        <form
+          onSubmit={handleSubmit}
+          style={{
+            display: "grid",
+            gap: "10px",
+            gridTemplateColumns: "25% 1fr",
+          }}
         >
-          Add To Cart
-        </Button>
+          <input
+            type="number"
+            name="itemQty"
+            min="1"
+            onChange={handleQtyChange}
+            value={itemQty}
+          ></input>
+          <Button
+            style={{ background: "#912F40", border: "1px solid #912F40" }}
+            type={"submit"}
+          >
+            Add To Cart
+          </Button>
+        </form>
       </Card.Body>
     </Card>
   );
