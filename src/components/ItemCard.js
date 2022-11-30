@@ -1,13 +1,18 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 import { CartContext } from "../App";
 import formatCurrency from "../functions/formatCurrency";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import Overlay from "react-bootstrap/Overlay";
+import Tooltip from "react-bootstrap/Tooltip";
 
 const ItemCard = ({ id, title, price, imgUrl }) => {
   const { cart, setCart } = useContext(CartContext);
 
   const [itemQty, setItemQty] = useState("1");
+
+  const [show, setShow] = useState(false);
+  const target = useRef(null);
 
   // when rerender, qty amount dissappears...do we care?
   // useEffect(() => {
@@ -38,6 +43,14 @@ const ItemCard = ({ id, title, price, imgUrl }) => {
     e.preventDefault();
     addToCart(parseInt(itemQty));
   };
+
+  const tooltipTimeout =  () => {
+    setShow(!show);
+    setTimeout(() => {
+      setShow(current => !current)
+    }, 1500);
+  }
+  
 
   return (
     <Card>
@@ -72,9 +85,18 @@ const ItemCard = ({ id, title, price, imgUrl }) => {
           <Button
             style={{ background: "#912F40", border: "1px solid #912F40" }}
             type={"submit"}
+            ref={target}
+            onClick={tooltipTimeout}
           >
             Add To Cart
           </Button>
+          <Overlay target={target.current} show={show} placement="bottom">
+            {(props) => (
+              <Tooltip {...props}>
+                Added to cart!
+              </Tooltip>
+            )}
+          </Overlay>
         </form>
       </Card.Body>
     </Card>
