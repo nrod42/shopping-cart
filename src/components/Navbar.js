@@ -4,7 +4,10 @@ import { CartContext } from "../App";
 import CartItem from "./CartItem";
 import products from "../data/products.json";
 import formatCurrency from "../functions/formatCurrency";
-import { Offcanvas, Button, Nav, Navbar as NavbarBs } from "react-bootstrap";
+import NavbarBs from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import Button from "react-bootstrap/Button";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {

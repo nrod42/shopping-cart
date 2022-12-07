@@ -2,7 +2,7 @@ import { Button } from "react-bootstrap";
 import products from "../data/products.json";
 import formatCurrency from "../functions/formatCurrency";
 
-const CardItem = (props) => {
+const CartItem = (props) => {
   const { id, quantity } = props.item;
 
   const { title, price, imgUrl } = products.find(
@@ -62,4 +62,4 @@ const CardItem = (props) => {
   );
 };
 
-export default CardItem;
+export default CartItem;

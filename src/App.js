@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Store from "./pages/Store";
 import About from "./pages/About";
@@ -24,17 +25,7 @@ function App() {
             <Route path="/shopping-cart/checkout" element={<Checkout />} />
           </Routes>
         </Container>
-        <footer className="mb-0 mt-auto pb-2">
-          <span
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            © 2022 - Nigel Rodriguez
-          </span>
-        </footer>
+        <Footer />
       </CartContext.Provider>
     </div>
   );

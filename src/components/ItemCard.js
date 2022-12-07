@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState, useRef } from "react";
+import React, { useContext, useState, useRef } from "react";
 import { CartContext } from "../App";
 import formatCurrency from "../functions/formatCurrency";
 import Card from "react-bootstrap/Card";
@@ -7,7 +7,7 @@ import Overlay from "react-bootstrap/Overlay";
 import Tooltip from "react-bootstrap/Tooltip";
 
 const ItemCard = ({ id, title, price, imgUrl }) => {
-  const { cart, setCart } = useContext(CartContext);
+  const { setCart } = useContext(CartContext);
 
   const [itemQty, setItemQty] = useState("1");
 
@@ -44,13 +44,12 @@ const ItemCard = ({ id, title, price, imgUrl }) => {
     addToCart(parseInt(itemQty));
   };
 
-  const tooltipTimeout =  () => {
+  const tooltipTimeout = () => {
     setShow(!show);
     setTimeout(() => {
-      setShow(current => !current)
-    }, 1500);
-  }
-  
+      setShow((current) => !current);
+    }, 2000);
+  };
 
   return (
     <Card>
@@ -91,11 +90,7 @@ const ItemCard = ({ id, title, price, imgUrl }) => {
             Add To Cart
           </Button>
           <Overlay target={target.current} show={show} placement="bottom">
-            {(props) => (
-              <Tooltip {...props}>
-                Added to cart!
-              </Tooltip>
-            )}
+            {(props) => <Tooltip {...props}>Added to cart!</Tooltip>}
           </Overlay>
         </form>
       </Card.Body>
