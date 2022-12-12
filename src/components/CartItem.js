@@ -1,13 +1,26 @@
-import { Button } from "react-bootstrap";
+import React, { useContext } from "react";
+import { CartContext } from "../App";
 import products from "../data/products.json";
 import formatCurrency from "../functions/formatCurrency";
+import Button from "react-bootstrap/Button";
 
 const CartItem = (props) => {
+  const { cart, setCart } = useContext(CartContext);
+
   const { id, quantity } = props.item;
 
   const { title, price, imgUrl } = products.find(
     (product) => product.id === id
   );
+
+  const handleDelete = () => {
+    const index = cart.findIndex((item) => item.id === id)
+    if (index !== -1) {
+      const updatedElements = [...cart];
+      updatedElements.splice(index, 1)
+      setCart(updatedElements)
+    }
+  }
 
   const containerStyle = {
     display: "grid",
@@ -51,7 +64,7 @@ const CartItem = (props) => {
         </div>
       </div>
 
-      <Button variant="danger" style={delBtnStyle}>
+      <Button variant="danger" style={delBtnStyle} onClick={handleDelete}>
         <img
           src="./imgs/trash.svg"
           alt="delete button"
