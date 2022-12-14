@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { CartContext } from "../App";
 import CartItem from "./CartItem";
 import products from "../data/products.json";
@@ -8,12 +8,11 @@ import NavbarBs from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Button from "react-bootstrap/Button";
-import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const { cart } = useContext(CartContext);
 
-  //Bootstrap offcanvas states
+  //Opens and closes Bootstrap offcanvas
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -25,6 +24,9 @@ const Navbar = () => {
       style={{ color: "white" }}
     >
       <Nav className="me-auto">
+        <Nav.Link to="/shopping-cart" as={NavLink}>
+          SHOPMART (ADD LOGO)
+        </Nav.Link>
         <Nav.Link to="/shopping-cart" as={NavLink}>
           Home
         </Nav.Link>
@@ -47,10 +49,10 @@ const Navbar = () => {
         onClick={handleShow}
       >
         <img
-          src="./imgs/shoppingCart.svg"
+          src={"./imgs/shopping-cart.svg"}
           alt="shopping cart button"
           style={{ height: "1.8rem" }}
-        ></img>
+        />
         <div
           className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
           style={{
@@ -104,9 +106,13 @@ const Navbar = () => {
           )}`}
         </div>
         <div style={{ padding: "1.1rem", textAlign: "center" }}>
-          <Link to={"/shopping-cart/checkout"} onClick={handleClose}>
+          <Nav.Link
+            to={"/shopping-cart/checkout"}
+            as={NavLink}
+            onClick={handleClose}
+          >
             <Button variant="success">Checkout</Button>
-          </Link>
+          </Nav.Link>
         </div>
       </Offcanvas>
     </NavbarBs>

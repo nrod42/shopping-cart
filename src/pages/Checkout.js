@@ -16,8 +16,8 @@ const Checkout = () => {
     0
   );
 
-  const tax = subtotal * 1.08875;
-  const shipping = 5;
+  const tax = subtotal * 0.08875;
+  const shipping = subtotal * 0.1;
   const total = subtotal + tax + shipping;
 
   return (

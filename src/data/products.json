@@ -1,86 +1,114 @@
 [
     { 
         "id": 1, 
-        "title": "Books", 
-        "price": 1000, 
-        "imgUrl": "./imgs/books.jpg" 
+        "title": "Desk", 
+        "price": 500, 
+        "imgUrl": "./imgs/desk.avif",
+        "category": "furniture"
     },
     { 
         "id": 2, 
-        "title": "Bulb", 
-        "price": 1000, 
-        "imgUrl": "./imgs/bulb.jpg" 
+        "title": "Chair", 
+        "price": 230, 
+        "imgUrl": "./imgs/chair.jpg",
+        "category": "furniture"
     },
     { 
         "id": 3, 
-        "title": "Chess", 
-        "price": 1000, 
-        "imgUrl": "./imgs/chess.jpg" 
+        "title": "Couch", 
+        "price": 700, 
+        "imgUrl": "./imgs/couch.avif",
+        "category": "furniture"
     },
     { 
         "id": 4, 
-        "title": "Coffee", 
-        "price": 1000, 
-        "imgUrl": "./imgs/coffee.jpg"
+        "title": "Coffee Table", 
+        "price": 160, 
+        "imgUrl": "./imgs/table.avif",
+        "category": "furniture"
     },
     { 
         "id": 5, 
-        "title": "Lens", 
-        "price": 1000, 
-        "imgUrl": "./imgs/lens.jpg" 
+        "title": "T-Shirt", 
+        "price": 25, 
+        "imgUrl": "./imgs/tshirt.jpg",
+        "category": "clothes"
     },
     { 
         "id": 6, 
-        "title": "Jeans", 
-        "price": 1000, 
-        "imgUrl": "./imgs/jeans.jpg" 
+        "title": "Pants", 
+        "price": 50, 
+        "imgUrl": "./imgs/pants.webp",
+        "category": "clothes"
     },
     { 
         "id": 7, 
-        "title": "Computer", 
-        "price": 1000, 
-        "imgUrl": "./imgs/computer.jpg" 
+        "title": "Sneakers", 
+        "price": 120, 
+        "imgUrl": "./imgs/sneakers.webp",
+        "category": "clothes" 
     },
     { 
         "id": 8, 
-        "title": "Bulb", 
-        "price": 1000, 
-        "imgUrl": "./imgs/bulb.jpg" 
+        "title": "Coat", 
+        "price": 500, 
+        "imgUrl": "./imgs/coat.jpeg",
+        "category": "clothes"
     },
     { 
         "id": 9, 
-        "title": "Chess", 
-        "price": 1000, 
-        "imgUrl": "./imgs/chess.jpg" 
+        "title": "Smartwatch", 
+        "price": 800, 
+        "imgUrl": "./imgs/smartwatch.jpeg",
+        "category": "electronics"
     },
     { 
         "id": 10, 
-        "title": "Coffee", 
-        "price": 1000, 
-        "imgUrl": "./imgs/coffee.jpg"
+        "title": "Gaming PC", 
+        "price": 1400, 
+        "imgUrl": "./imgs/gaming_pc.jpg",
+        "category": "electronics"
     },
     { 
         "id": 11, 
-        "title": "Lens", 
+        "title": "Smart Phone", 
         "price": 1000, 
-        "imgUrl": "./imgs/lens.jpg" 
+        "imgUrl": "./imgs/iphone.webp",
+        "category": "electronics"
     },
     { 
         "id": 12, 
-        "title": "Jeans", 
-        "price": 1000, 
-        "imgUrl": "./imgs/jeans.jpg" 
+        "title": "Headphones", 
+        "price": 700, 
+        "imgUrl": "./imgs/headphones.jpg", 
+        "category": "electronics"
     },
     { 
         "id": 13, 
-        "title": "Computer", 
-        "price": 1000, 
-        "imgUrl": "./imgs/computer.jpg" 
+        "title": "Toaster", 
+        "price": 60, 
+        "imgUrl": "./imgs/toaster.jpeg", 
+        "category": "appliances"
     },
     { 
         "id": 14, 
-        "title": "Whiskey", 
-        "price": 1000, 
-        "imgUrl": "./imgs/whiskey.jpg" 
+        "title": "Espresso Machine", 
+        "price": 500, 
+        "imgUrl": "./imgs/espresso.jpg", 
+        "category": "appliances"
+    },
+    { 
+        "id": 15, 
+        "title": "Microwave", 
+        "price": 120, 
+        "imgUrl": "./imgs/microwave.webp", 
+        "category": "appliances"
+    },
+    { 
+        "id": 16, 
+        "title": "Toaster Oven", 
+        "price": 180, 
+        "imgUrl": "./imgs/toaster-oven.jpg", 
+        "category": "appliances"
     }
 ]

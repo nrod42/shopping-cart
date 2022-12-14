@@ -1,3 +1,12 @@
 html, body, #root, .App {
     height: 100%;
 }
+
+.nav-item * {
+    color: #912F40 !important;
+}
+
+.nav-item .nav-link.active {
+    background-color: #912F40 !important;
+    color: white !important;
+}
