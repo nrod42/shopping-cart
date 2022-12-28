@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { CartContext } from "../App";
-import products from "../data/products.json";
+import products from "../data/products";
 import formatCurrency from "../functions/formatCurrency";
 import Button from "react-bootstrap/Button";
+import trashIcon from '../imgs/trash.svg';
 
 const CartItem = (props) => {
   const { cart, setCart } = useContext(CartContext);
@@ -32,8 +33,9 @@ const CartItem = (props) => {
 
   const imgStyle = {
     height: "100%",
-    width: "100%",
-    borderRadius: "5px",
+    maxWidth: '100%',
+    objectFit: 'contain',
+    // borderRadius: "5px",
   };
 
   const delBtnStyle = {
@@ -47,7 +49,7 @@ const CartItem = (props) => {
 
   return (
     <div style={containerStyle}>
-      <div style={{ height: "100px", width: "100px", borderRadius: "5px" }}>
+      <div style={{ height: "100px", width: "100px", borderRadius: "5px", display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <img style={imgStyle} src={imgUrl} alt={title} />
       </div>
       <div>
@@ -66,7 +68,7 @@ const CartItem = (props) => {
 
       <Button variant="danger" style={delBtnStyle} onClick={handleDelete}>
         <img
-          src="./imgs/trash.svg"
+          src={trashIcon}
           alt="delete button"
           style={{ height: "1.5rem" }}
         ></img>

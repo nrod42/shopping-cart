@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 import { CartContext } from "../App";
 import CartItem from "../components/CartItem";
 import formatCurrency from "../functions/formatCurrency";
-import products from "../data/products.json";
+import products from "../data/products";
 
 const Checkout = () => {
   const { cart } = useContext(CartContext);

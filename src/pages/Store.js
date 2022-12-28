@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ItemCard from "../components/ItemCard";
 import CategoryNav from "../components/CategoryNav";
-import products from "../data/products.json";
+import products from "../data/products";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 

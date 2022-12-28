@@ -1,114 +1,116 @@
-[
+const products = [
     { 
         "id": 1, 
         "title": "Desk", 
         "price": 500, 
-        "imgUrl": "./imgs/desk.avif",
+        "imgUrl": require("../imgs/desk.avif"),
         "category": "furniture"
     },
     { 
         "id": 2, 
         "title": "Chair", 
         "price": 230, 
-        "imgUrl": "./imgs/chair.jpg",
+        "imgUrl": require("../imgs/chair.jpg"),
         "category": "furniture"
     },
     { 
         "id": 3, 
         "title": "Couch", 
         "price": 700, 
-        "imgUrl": "./imgs/couch.avif",
+        "imgUrl": require("../imgs/couch.avif"),
         "category": "furniture"
     },
     { 
         "id": 4, 
         "title": "Coffee Table", 
         "price": 160, 
-        "imgUrl": "./imgs/table.avif",
+        "imgUrl": require("../imgs/table.avif"),
         "category": "furniture"
     },
     { 
         "id": 5, 
         "title": "T-Shirt", 
         "price": 25, 
-        "imgUrl": "./imgs/tshirt.jpg",
+        "imgUrl": require("../imgs/tshirt.jpg"),
         "category": "clothes"
     },
     { 
         "id": 6, 
         "title": "Pants", 
         "price": 50, 
-        "imgUrl": "./imgs/pants.webp",
+        "imgUrl": require("../imgs/pants.webp"),
         "category": "clothes"
     },
     { 
         "id": 7, 
         "title": "Sneakers", 
         "price": 120, 
-        "imgUrl": "./imgs/sneakers.webp",
+        "imgUrl": require("../imgs/sneakers.webp"),
         "category": "clothes" 
     },
     { 
         "id": 8, 
         "title": "Coat", 
         "price": 500, 
-        "imgUrl": "./imgs/coat.jpeg",
+        "imgUrl": require("../imgs/coat.jpeg"),
         "category": "clothes"
     },
     { 
         "id": 9, 
         "title": "Smartwatch", 
         "price": 800, 
-        "imgUrl": "./imgs/smartwatch.jpeg",
+        "imgUrl": require("../imgs/smartwatch.jpeg"),
         "category": "electronics"
     },
     { 
         "id": 10, 
         "title": "Gaming PC", 
         "price": 1400, 
-        "imgUrl": "./imgs/gaming_pc.jpg",
+        "imgUrl": require("../imgs/gaming_pc.jpg"),
         "category": "electronics"
     },
     { 
         "id": 11, 
         "title": "Smart Phone", 
         "price": 1000, 
-        "imgUrl": "./imgs/iphone.webp",
+        "imgUrl": require("../imgs/iphone.webp"),
         "category": "electronics"
     },
     { 
         "id": 12, 
         "title": "Headphones", 
         "price": 700, 
-        "imgUrl": "./imgs/headphones.jpg", 
+        "imgUrl": require("../imgs/headphones.jpg"), 
         "category": "electronics"
     },
     { 
         "id": 13, 
         "title": "Toaster", 
         "price": 60, 
-        "imgUrl": "./imgs/toaster.jpeg", 
+        "imgUrl": require("../imgs/toaster.jpeg"), 
         "category": "appliances"
     },
     { 
         "id": 14, 
         "title": "Espresso Machine", 
         "price": 500, 
-        "imgUrl": "./imgs/espresso.jpg", 
+        "imgUrl": require("../imgs/espresso.jpg"), 
         "category": "appliances"
     },
     { 
         "id": 15, 
         "title": "Microwave", 
         "price": 120, 
-        "imgUrl": "./imgs/microwave.webp", 
+        "imgUrl": require("../imgs/microwave.webp"), 
         "category": "appliances"
     },
     { 
         "id": 16, 
         "title": "Toaster Oven", 
         "price": 180, 
-        "imgUrl": "./imgs/toaster-oven.jpg", 
+        "imgUrl": require("../imgs/toaster-oven.jpg"), 
         "category": "appliances"
     }
 ]
+
+export default products;

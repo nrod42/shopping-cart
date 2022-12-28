@@ -2,12 +2,13 @@ import React, { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { CartContext } from "../App";
 import CartItem from "./CartItem";
-import products from "../data/products.json";
+import products from "../data/products";
 import formatCurrency from "../functions/formatCurrency";
 import NavbarBs from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Button from "react-bootstrap/Button";
+import cartIcon from "../imgs/shopping-cart.svg"
 
 const Navbar = () => {
   const { cart } = useContext(CartContext);
@@ -25,7 +26,7 @@ const Navbar = () => {
     >
       <Nav className="me-auto">
         <Nav.Link to="/shopping-cart" as={NavLink}>
-          SHOPMART (ADD LOGO)
+          SHOPMART
         </Nav.Link>
         <Nav.Link to="/shopping-cart" as={NavLink}>
           Home
@@ -49,7 +50,7 @@ const Navbar = () => {
         onClick={handleShow}
       >
         <img
-          src={"./imgs/shopping-cart.svg"}
+          src={cartIcon}
           alt="shopping cart button"
           style={{ height: "1.8rem" }}
         />
@@ -81,7 +82,7 @@ const Navbar = () => {
           style={{ display: "flex", flexDirection: "column", gap: "20px" }}
         >
           {cart.length === 0
-            ? "Empty"
+            ? "Browse the stores and add items to your cart!"
             : cart.map((item) => <CartItem item={item} />)}
         </Offcanvas.Body>
         <div

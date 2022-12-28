@@ -14,7 +14,7 @@ export const CartContext = React.createContext();
 function App() {
   const [cart, setCart] = useState([]);
   return (
-    <div className="App d-flex flex-column justify-content-space-between">
+    <div className="App d-flex flex-column justify-content-space-between" >
       <CartContext.Provider value={{ cart, setCart }}>
         <Navbar />
         <Container className="mb-5">

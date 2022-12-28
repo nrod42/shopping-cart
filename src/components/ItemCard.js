@@ -57,7 +57,7 @@ const ItemCard = ({ id, title, price, imgUrl }) => {
         variant="top"
         src={imgUrl}
         height="200px"
-        style={{ objectFit: "cover" }}
+        style={{ objectFit: "contain" }}
       />
       <Card.Body className="d-flex flex-column">
         <Card.Title className="d-flex flex-wrap justify-content-between align-items-center mb-4">
