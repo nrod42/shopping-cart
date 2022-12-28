@@ -1,13 +1,31 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.3d8d1e37.css",
-    "main.js": "/shopping-cart/static/js/main.56311599.js",
+    "main.js": "/shopping-cart/static/js/main.50655549.js",
+    "static/media/headphones.jpg": "/shopping-cart/static/media/headphones.f1ef412ae2bba7841b2b.jpg",
+    "static/media/tshirt.jpg": "/shopping-cart/static/media/tshirt.b72c7739a2a69134135d.jpg",
+    "static/media/gaming_pc.jpg": "/shopping-cart/static/media/gaming_pc.0399e79a29e029526b17.jpg",
+    "static/media/smartwatch.jpeg": "/shopping-cart/static/media/smartwatch.f76291ccfd3ad2d2b3f2.jpeg",
+    "static/media/toaster.jpeg": "/shopping-cart/static/media/toaster.c6291aca59e5e00c4baf.jpeg",
+    "static/media/toaster-oven.jpg": "/shopping-cart/static/media/toaster-oven.1f6a69507723bdbc8b97.jpg",
+    "static/media/couch.avif": "/shopping-cart/static/media/couch.e8352cfd300863918e7a.avif",
+    "static/media/espresso.jpg": "/shopping-cart/static/media/espresso.c9e381175e5d2840ad26.jpg",
+    "static/media/pants.webp": "/shopping-cart/static/media/pants.3a695b3da650ed9dd8b9.webp",
+    "static/media/chair.jpg": "/shopping-cart/static/media/chair.ec2e8b905b58ec8a136a.jpg",
+    "static/media/coat.jpeg": "/shopping-cart/static/media/coat.173f3c6637374387b936.jpeg",
+    "static/media/microwave.webp": "/shopping-cart/static/media/microwave.8c2bab7bca060a0f1894.webp",
+    "static/media/sneakers.webp": "/shopping-cart/static/media/sneakers.3f4e6d168963f2412e51.webp",
+    "static/media/table.avif": "/shopping-cart/static/media/table.5311256f294c28ac512f.avif",
+    "static/media/iphone.webp": "/shopping-cart/static/media/iphone.6f1090028a20acdf5493.webp",
+    "static/media/desk.avif": "/shopping-cart/static/media/desk.3f9c6db958785c7fe6b2.avif",
     "index.html": "/shopping-cart/index.html",
+    "static/media/shopping-cart.svg": "/shopping-cart/static/media/shopping-cart.287e70bcb24b99bd6facad3ebbef68ea.svg",
+    "static/media/trash.svg": "/shopping-cart/static/media/trash.692ee10cee605d4ac262cc1947413eb3.svg",
     "main.3d8d1e37.css.map": "/shopping-cart/static/css/main.3d8d1e37.css.map",
-    "main.56311599.js.map": "/shopping-cart/static/js/main.56311599.js.map"
+    "main.50655549.js.map": "/shopping-cart/static/js/main.50655549.js.map"
   },
   "entrypoints": [
     "static/css/main.3d8d1e37.css",
-    "static/js/main.56311599.js"
+    "static/js/main.50655549.js"
   ]
 }
