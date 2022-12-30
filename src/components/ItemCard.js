@@ -1,4 +1,5 @@
 import React, { useContext, useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../App";
 import formatCurrency from "../functions/formatCurrency";
 import Card from "react-bootstrap/Card";
@@ -7,17 +8,12 @@ import Overlay from "react-bootstrap/Overlay";
 import Tooltip from "react-bootstrap/Tooltip";
 
 const ItemCard = ({ id, title, price, imgUrl }) => {
-  const { setCart } = useContext(CartContext);
+  const { setCart, setProductId } = useContext(CartContext);
 
   const [itemQty, setItemQty] = useState("1");
 
   const [show, setShow] = useState(false);
   const target = useRef(null);
-
-  // when rerender, qty amount dissappears...do we care?
-  // useEffect(() => {
-  //   setItemQty(cart.find((item) => item.id === id)?.quantity);
-  // }, [cart, id]);
 
   const addToCart = (quantity) => {
     setCart((currentItems) => {
@@ -26,7 +22,7 @@ const ItemCard = ({ id, title, price, imgUrl }) => {
       } else {
         return currentItems.map((item) => {
           if (item.id === id) {
-            return { ...item, quantity: quantity };
+            return { ...item, quantity: item.quantity + quantity };
           } else {
             return item;
           }
@@ -51,14 +47,21 @@ const ItemCard = ({ id, title, price, imgUrl }) => {
     }, 2000);
   };
 
+  const handleProductPage = () => {
+    setProductId(id);
+  };
+
   return (
     <Card>
-      <Card.Img
-        variant="top"
-        src={imgUrl}
-        height="200px"
-        style={{ objectFit: "contain" }}
-      />
+      <Card.Link as={Link} to={`/shopping-cart/products/id:${id}`}>
+        <Card.Img
+          variant="top"
+          src={imgUrl}
+          height="200px"
+          style={{ objectFit: "contain" }}
+          onClick={handleProductPage}
+        />
+      </Card.Link>
       <Card.Body className="d-flex flex-column">
         <Card.Title className="d-flex flex-wrap justify-content-between align-items-center mb-4">
           <span className="fs-4">{title}</span>

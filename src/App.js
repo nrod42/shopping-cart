@@ -7,28 +7,33 @@ import About from "./pages/About";
 import Checkout from "./pages/Checkout";
 import { Routes, Route } from "react-router-dom";
 import "./index.css";
-import Container from "react-bootstrap/Container";
+import Product from "./pages/Product";
+// import Container from "react-bootstrap/Container";
 
 export const CartContext = React.createContext();
 
-function App() {
+const App = () => {
   const [cart, setCart] = useState([]);
+  const [productId, setProductId] = useState(""); // id of product the use has clicked on. Passed to the Product component to generate the product page for that item.
+
   return (
-    <div className="App d-flex flex-column justify-content-space-between" >
-      <CartContext.Provider value={{ cart, setCart }}>
+    <div className="App d-flex flex-column justify-content-space-between">
+      <CartContext.Provider value={{ cart, setCart, productId, setProductId }}>
         <Navbar />
-        <Container className="mb-5">
-          <Routes>
-            <Route path="/shopping-cart" element={<Home />} />
-            <Route path="/shopping-cart/store" element={<Store />} />
-            <Route path="/shopping-cart/about" element={<About />} />
-            <Route path="/shopping-cart/checkout" element={<Checkout />} />
-          </Routes>
-        </Container>
+        <Routes>
+          <Route path="/shopping-cart" element={<Home />} />
+          <Route path="/shopping-cart/store" element={<Store />} />
+          <Route path="/shopping-cart/about" element={<About />} />
+          <Route
+            path={`/shopping-cart/products/id:${productId}`}
+            element={<Product />}
+          />
+          <Route path="/shopping-cart/checkout" element={<Checkout />} />
+        </Routes>
         <Footer />
       </CartContext.Provider>
     </div>
   );
-}
+};
 
 export default App;

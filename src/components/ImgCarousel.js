@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 // import products from "../data/products.json";
 
-const ImgCarousel = ({array}) => {
+const ImgCarousel = ({ array }) => {
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
@@ -10,14 +10,22 @@ const ImgCarousel = ({array}) => {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel
+      activeIndex={index}
+      onSelect={handleSelect}
+      style={{ background: "black", padding: "40px", paddingBottom: "100px" }}
+    >
       {array.map((item, index) => (
-        <Carousel.Item interval={5000} style={{ height: '500px', width: '100%'}} key={index}>
+        <Carousel.Item
+          interval={5000}
+          style={{ height: "500px", width: "100%" }}
+          key={index}
+        >
           <img
             className="d-block w-100"
             src={item.imgUrl}
             alt={item.title}
-            style={{ height: '100%', width: 'auto', objectFit: 'contain'}}
+            style={{ height: "100%", width: "auto", objectFit: "contain" }}
           />
           <Carousel.Caption>
             <h3>{item.title}</h3>

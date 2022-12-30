@@ -5,6 +5,7 @@ import { CartContext } from "../App";
 import CartItem from "../components/CartItem";
 import formatCurrency from "../functions/formatCurrency";
 import products from "../data/products";
+import Container from "react-bootstrap/Container";
 
 const Checkout = () => {
   const { cart } = useContext(CartContext);
@@ -21,67 +22,66 @@ const Checkout = () => {
   const total = subtotal + tax + shipping;
 
   return (
-    <div className="checkoutPage">
-      <h1>Shopping Cart</h1>
-
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "3fr 1fr",
-          gap: "40px",
-          position: "relative",
-        }}
-      >
+    <Container className="mb-5">
+      <div className="checkoutPage">
+        <h1>Shopping Cart</h1>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "3fr 1fr",
+            gap: "40px",
+            position: "relative",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "20px",
+            }}
+          >
+            {cart.length === 0
+              ? "Empty"
+              : cart.map((item) => <CartItem item={item} />)}
+          </div>
+          <div
+            style={{
+              backgroundColor: "#e0e0e0",
+              borderRadius: "10px",
+              padding: "1rem",
+            }}
+          >
+            <h2>Summary</h2>
+            <h3>
+              Items:{" "}
+              {cart.reduce((total, current) => {
+                return (total += current.quantity);
+              }, 0)}
+            </h3>
+            <p>Sub-total: {formatCurrency(subtotal)}</p>
+            <p>Tax: {formatCurrency(tax)}</p>
+            <p>Shipping: {formatCurrency(shipping)}</p>
+            <h3>Total: {formatCurrency(total)}</h3>
+          </div>
+        </div>
         <div
           style={{
             display: "flex",
-            flexDirection: "column",
-            gap: "20px",
+            gap: "2rem",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: "50px",
           }}
         >
-          {cart.length === 0
-            ? "Empty"
-            : cart.map((item) => <CartItem item={item} />)}
-        </div>
-
-        <div
-          style={{
-            backgroundColor: "#e0e0e0",
-            borderRadius: "10px",
-            padding: "1rem",
-          }}
-        >
-          <h2>Summary</h2>
-          <h3>
-            Items:{" "}
-            {cart.reduce((total, current) => {
-              return (total += current.quantity);
-            }, 0)}
-          </h3>
-          <p>Sub-total: {formatCurrency(subtotal)}</p>
-          <p>Tax: {formatCurrency(tax)}</p>
-          <p>Shipping: {formatCurrency(shipping)}</p>
-          <h3>Total: {formatCurrency(total)}</h3>
+          <Link to="/shopping-cart/store">
+            <Button variant="secondary">Back to shop</Button>
+          </Link>
+          <div>
+            <Button variant="success">Place Order</Button>
+          </div>
         </div>
       </div>
-
-      <div
-        style={{
-          display: "flex",
-          gap: "2rem",
-          alignItems: "center",
-          justifyContent: "center",
-          marginTop: "50px",
-        }}
-      >
-        <Link to="/shopping-cart/store">
-          <Button variant="secondary">Back to shop</Button>
-        </Link>
-        <div>
-          <Button variant="success">Place Order</Button>
-        </div>
-      </div>
-    </div>
+    </Container>
   );
 };
 
