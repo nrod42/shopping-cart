@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.3d8d1e37.css",
-    "main.js": "/shopping-cart/static/js/main.50655549.js",
+    "main.js": "/shopping-cart/static/js/main.e65acca3.js",
     "static/media/headphones.jpg": "/shopping-cart/static/media/headphones.f1ef412ae2bba7841b2b.jpg",
     "static/media/tshirt.jpg": "/shopping-cart/static/media/tshirt.b72c7739a2a69134135d.jpg",
     "static/media/gaming_pc.jpg": "/shopping-cart/static/media/gaming_pc.0399e79a29e029526b17.jpg",
@@ -22,10 +22,10 @@
     "static/media/shopping-cart.svg": "/shopping-cart/static/media/shopping-cart.287e70bcb24b99bd6facad3ebbef68ea.svg",
     "static/media/trash.svg": "/shopping-cart/static/media/trash.692ee10cee605d4ac262cc1947413eb3.svg",
     "main.3d8d1e37.css.map": "/shopping-cart/static/css/main.3d8d1e37.css.map",
-    "main.50655549.js.map": "/shopping-cart/static/js/main.50655549.js.map"
+    "main.e65acca3.js.map": "/shopping-cart/static/js/main.e65acca3.js.map"
   },
   "entrypoints": [
     "static/css/main.3d8d1e37.css",
-    "static/js/main.50655549.js"
+    "static/js/main.e65acca3.js"
   ]
 }
