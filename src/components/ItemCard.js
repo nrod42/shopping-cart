@@ -53,7 +53,7 @@ const ItemCard = ({ id, title, price, imgUrl }) => {
 
   return (
     <Card style={{ border: "none" }}>
-      <Card.Link as={Link} to={`/shopping-cart/products/id:${id}`}>
+      <Card.Link as={Link} to={`/shopping-cart/products/${id}`}>
         <Card.Img
           variant="top"
           src={imgUrl}

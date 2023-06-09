@@ -30,7 +30,7 @@ const ImgCarousel = ({ array }) => {
           >
             {item.title}
           </h3>
-          <Link to={`/shopping-cart/products/id:${item.id}`}>
+          <Link to={`/shopping-cart/products/${item.id}`}>
             <img
               className="d-block w-100"
               src={item.imgUrl}
