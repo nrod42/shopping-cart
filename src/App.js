@@ -3,7 +3,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Store from "./pages/Store";
-import About from "./pages/About";
 import Checkout from "./pages/Checkout";
 import { Routes, Route } from "react-router-dom";
 import "./index.css";
@@ -23,7 +22,6 @@ const App = () => {
         <Routes>
           <Route path="/shopping-cart" element={<Home />} />
           <Route path="/shopping-cart/store" element={<Store />} />
-          <Route path="/shopping-cart/about" element={<About />} />
           <Route
             path={`/shopping-cart/products/id:${productId}`}
             element={<Product />}

@@ -10,3 +10,7 @@ html, body, #root, .App {
     background-color: #912F40 !important;
     color: white !important;
 }
+
+#cartBtn:hover {
+    background-color: #912F40 !important;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
-// import products from "../data/products.json";
+import { Link } from "react-router-dom";
 
 const ImgCarousel = ({ array }) => {
   const [index, setIndex] = useState(0);
@@ -21,15 +21,23 @@ const ImgCarousel = ({ array }) => {
           style={{ height: "500px", width: "100%" }}
           key={index}
         >
-          <img
-            className="d-block w-100"
-            src={item.imgUrl}
-            alt={item.title}
-            style={{ height: "100%", width: "auto", objectFit: "contain" }}
-          />
-          <Carousel.Caption>
-            <h3>{item.title}</h3>
-          </Carousel.Caption>
+          <h3
+            style={{
+              color: "white",
+              textAlign: "center",
+              paddingBottom: "20px",
+            }}
+          >
+            {item.title}
+          </h3>
+          <Link to={`/shopping-cart/products/id:${item.id}`}>
+            <img
+              className="d-block w-100"
+              src={item.imgUrl}
+              alt={item.title}
+              style={{ height: "100%", width: "auto", objectFit: "contain" }}
+            />
+          </Link>
         </Carousel.Item>
       ))}
     </Carousel>

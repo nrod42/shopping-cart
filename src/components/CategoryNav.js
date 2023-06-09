@@ -11,11 +11,11 @@ const CategoryNav = ({
     <Nav
       variant="pills"
       defaultActiveKey="all"
+      className="mb-5"
       style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        marginBottom: "1.3rem",
       }}
     >
       <Nav.Item>

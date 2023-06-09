@@ -8,7 +8,7 @@ import NavbarBs from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Button from "react-bootstrap/Button";
-import cartIcon from "../imgs/shopping-cart.svg"
+import cartIcon from "../imgs/shopping-cart.svg";
 
 const Navbar = () => {
   const { cart } = useContext(CartContext);
@@ -34,9 +34,6 @@ const Navbar = () => {
         <Nav.Link to="/shopping-cart/store" as={NavLink}>
           Store
         </Nav.Link>
-        <Nav.Link to="/shopping-cart/about" as={NavLink}>
-          About
-        </Nav.Link>
       </Nav>
       <Button
         style={{
@@ -44,10 +41,12 @@ const Navbar = () => {
           width: "3rem",
           position: "relative",
           textAlign: "center",
+          borderColor: "#912F40",
         }}
         variant="outline-primary"
         className="rounded-circle d-flex align-items-center justify-content-center"
         onClick={handleShow}
+        id="cartBtn"
       >
         <img
           src={cartIcon}
@@ -55,9 +54,10 @@ const Navbar = () => {
           style={{ height: "1.8rem" }}
         />
         <div
-          className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
+          className="rounded-circle d-flex justify-content-center align-items-center"
           style={{
             color: "white",
+            backgroundColor: "#912F40",
             fontSize: "0.75rem",
             width: "1.5rem",
             height: "1.5rem",

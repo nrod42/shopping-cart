@@ -1,11 +1,14 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+
 import { CartContext } from "../App";
 import CartItem from "../components/CartItem";
 import formatCurrency from "../functions/formatCurrency";
 import products from "../data/products";
 import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const Checkout = () => {
   const { cart } = useContext(CartContext);
@@ -23,29 +26,22 @@ const Checkout = () => {
 
   return (
     <Container className="mb-5">
-      <div className="checkoutPage">
-        <h1>Shopping Cart</h1>
-        <div
+      <h1>Shopping Cart</h1>
+      <Row xs={1} md={2} className="mt-5 checkoutPage">
+        <Col md={9}>
+          {cart.length === 0
+            ? "Empty"
+            : cart.map((item) => <CartItem item={item} />)}
+        </Col>
+        <Col
+          md={3}
           style={{
-            display: "grid",
-            gridTemplateColumns: "3fr 1fr",
-            gap: "40px",
             position: "relative",
           }}
         >
           <div
             style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "20px",
-            }}
-          >
-            {cart.length === 0
-              ? "Empty"
-              : cart.map((item) => <CartItem item={item} />)}
-          </div>
-          <div
-            style={{
+              position: "fixed",
               backgroundColor: "#e0e0e0",
               borderRadius: "10px",
               padding: "1rem",
@@ -63,22 +59,22 @@ const Checkout = () => {
             <p>Shipping: {formatCurrency(shipping)}</p>
             <h3>Total: {formatCurrency(total)}</h3>
           </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            gap: "2rem",
-            alignItems: "center",
-            justifyContent: "center",
-            marginTop: "50px",
-          }}
-        >
-          <Link to="/shopping-cart/store">
-            <Button variant="secondary">Back to shop</Button>
-          </Link>
-          <div>
-            <Button variant="success">Place Order</Button>
-          </div>
+        </Col>
+      </Row>
+      <div
+        style={{
+          display: "flex",
+          gap: "2rem",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: "50px",
+        }}
+      >
+        <Link to="/shopping-cart/store">
+          <Button variant="secondary">Back to shop</Button>
+        </Link>
+        <div>
+          <Button variant="success">Place Order</Button>
         </div>
       </div>
     </Container>

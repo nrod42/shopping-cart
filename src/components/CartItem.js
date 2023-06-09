@@ -3,7 +3,7 @@ import { CartContext } from "../App";
 import products from "../data/products";
 import formatCurrency from "../functions/formatCurrency";
 import Button from "react-bootstrap/Button";
-import trashIcon from '../imgs/trash.svg';
+import trashIcon from "../imgs/trash.svg";
 
 const CartItem = (props) => {
   const { cart, setCart } = useContext(CartContext);
@@ -15,27 +15,26 @@ const CartItem = (props) => {
   );
 
   const handleDelete = () => {
-    const index = cart.findIndex((item) => item.id === id)
+    const index = cart.findIndex((item) => item.id === id);
     if (index !== -1) {
       const updatedElements = [...cart];
-      updatedElements.splice(index, 1)
-      setCart(updatedElements)
+      updatedElements.splice(index, 1);
+      setCart(updatedElements);
     }
-  }
+  };
 
   const containerStyle = {
     display: "grid",
     gridTemplateColumns: "1fr 3fr 1fr",
     gap: "1rem",
-    alignItems: "start",
+    alignItems: "center",
     justifyContent: "start",
   };
 
   const imgStyle = {
     height: "100%",
-    maxWidth: '100%',
-    objectFit: 'contain',
-    // borderRadius: "5px",
+    maxWidth: "100%",
+    objectFit: "contain",
   };
 
   const delBtnStyle = {
@@ -49,7 +48,16 @@ const CartItem = (props) => {
 
   return (
     <div style={containerStyle}>
-      <div style={{ height: "100px", width: "100px", borderRadius: "5px", display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div
+        style={{
+          height: "100px",
+          width: "100px",
+          borderRadius: "5px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <img style={imgStyle} src={imgUrl} alt={title} />
       </div>
       <div>
