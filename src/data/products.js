@@ -127,6 +127,38 @@ const products = [
     description: "Strong hardwood desk made from whatever",
     category: "appliances",
   },
+  {
+    id: 17,
+    title: "Arm Chair",
+    price: 200,
+    imgUrl: require("../imgs/armchair.jpg"),
+    description: "Armchair",
+    category: "furniture",
+  },
+  {
+    id: 18,
+    title: "Blue T-Shirt",
+    price: 20,
+    imgUrl: require("../imgs/blue-tshirt.jpg"),
+    description: "Blue T-Shirt",
+    category: "clothes",
+  },
+  {
+    id: 19,
+    title: "Flannel Shirt",
+    price: 50,
+    imgUrl: require("../imgs/flannel-shirt.jpg"),
+    description: "Flannel",
+    category: "clothes",
+  },
+  {
+    id: 20,
+    title: "Hoodie",
+    price: 50,
+    imgUrl: require("../imgs/hoodie.jpg"),
+    description: "Hoodie",
+    category: "clothes",
+  },
 ];
 
 export default products;

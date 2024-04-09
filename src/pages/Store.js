@@ -40,13 +40,13 @@ const Store = () => {
           showElectronics={showElectronics}
           showAppliances={showAppliances}
         />
-        <Row xs={1} sm={2} md={3} lg={4} className="g-5">
-          {showProducts.map((item) => (
-            <Col key={item.id}>
-              <ItemCard {...item} />
-            </Col>
-          ))}
-        </Row>
+          <Row xs={1} sm={2} md={3} lg={4} className="g-5">
+            {showProducts.map((item) => (
+              <Col key={item.id}>
+                <ItemCard {...item} />
+              </Col>
+            ))}
+          </Row>
       </div>
     </Container>
   );

@@ -64,8 +64,8 @@ const ItemCard = ({ id, title, price, imgUrl }) => {
       </Card.Link>
       <Card.Body className="d-flex flex-column">
         <Card.Title className="d-flex flex-wrap justify-content-between align-items-center mb-4">
-          <span className="fs-4">{title}</span>
-          <span className="ms-2" style={{ color: "gray" }}>
+          <span className="fs-6">{title}</span>
+          <span className="ms-2 fs-6" style={{ color: "gray" }}>
             {formatCurrency(price)}
           </span>
         </Card.Title>
