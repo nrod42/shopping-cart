@@ -129,10 +129,10 @@ const products = [
   },
   {
     id: 17,
-    title: "Arm Chair",
+    title: "Fancy Chair",
     price: 200,
-    imgUrl: require("../imgs/armchair.jpg"),
-    description: "Armchair",
+    imgUrl: require("../imgs/fancy-chair.jpg"),
+    description: "Fancy Cahir",
     category: "furniture",
   },
   {
@@ -159,6 +159,47 @@ const products = [
     description: "Hoodie",
     category: "clothes",
   },
+  {
+    id: 21,
+    title: "Nightstand",
+    price: 50,
+    imgUrl: require("../imgs/nightstand.jpg"),
+    description: "Nightstand",
+    category: "furniture",
+  },
+  {
+    id: 22,
+    title: "Sofa",
+    price: 50,
+    imgUrl: require("../imgs/sofa.jpg"),
+    description: "Sofa",
+    category: "furniture",
+  },
+  {
+    id: 24,
+    title: "Rice Cooker",
+    price: 50,
+    imgUrl: require("../imgs/rice-cooker.jpg"),
+    description: "Rice Cooker",
+    category: "appliances",
+  },
+  {
+    id: 25,
+    title: "Blender",
+    price: 50,
+    imgUrl: require("../imgs/blender.jpg"),
+    description: "Blender",
+    category: "appliances",
+  },
+  {
+    id: 26,
+    title: "Kettle",
+    price: 50,
+    imgUrl: require("../imgs/kettle.jpg"),
+    description: "Kettle",
+    category: "appliances",
+  },
+  
 ];
 
 export default products;

@@ -9,10 +9,11 @@ const Home = () => {
       <Container className="mb-5">
         <h1>ShopMart</h1>
         <p>Welcome to the only shop that matters</p>
-      </Container>
-      <ImgCarousel array={products} />
+        <ImgCarousel array={products} />
+      {/* </Container> */}
+      
 
-      <Container className="mt-5">
+      {/* <Container className="mt-5"> */}
         <CategoryStrip category={"furniture"}/>
         <CategoryStrip category={"clothes"}/>
         <CategoryStrip category={"electronics"}/>

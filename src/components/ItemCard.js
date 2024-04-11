@@ -31,21 +31,25 @@ const ItemCard = ({ id, title, price, imgUrl }) => {
     });
   };
 
-  const handleQtyChange = (e) => {
-    setItemQty(e.target.value);
-  };
+  // const handleQtyChange = (e) => {
+  //   setItemQty(e.target.value);
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addToCart(parseInt(itemQty));
-  };
-
-  const tooltipTimeout = () => {
     setShow(!show);
     setTimeout(() => {
       setShow((current) => !current);
     }, 2000);
+    addToCart(parseInt(itemQty));
   };
+
+  // const tooltipTimeout = () => {
+  //   setShow(!show);
+  //   setTimeout(() => {
+  //     setShow((current) => !current);
+  //   }, 2000);
+  // };
 
   const handleProductPage = () => {
     setProductId(id);
@@ -69,33 +73,33 @@ const ItemCard = ({ id, title, price, imgUrl }) => {
             {formatCurrency(price)}
           </span>
         </Card.Title>
-        <form
+        {/* <form
           onSubmit={handleSubmit}
           style={{
             display: "grid",
             gap: "10px",
             gridTemplateColumns: "25% 1fr",
           }}
-        >
-          <input
+        > */}
+          {/* <input
             type="number"
             name="itemQty"
             min="1"
             onChange={handleQtyChange}
             value={itemQty}
-          ></input>
+          ></input> */}
           <Button
             style={{ background: "#912F40", border: "1px solid #912F40" }}
             type={"submit"}
             ref={target}
-            onClick={tooltipTimeout}
+            onClick={handleSubmit}
           >
             Add To Cart
           </Button>
           <Overlay target={target.current} show={show} placement="bottom">
             {(props) => <Tooltip {...props}>Added to cart!</Tooltip>}
           </Overlay>
-        </form>
+        {/* </form> */}
       </Card.Body>
     </Card>
   );
