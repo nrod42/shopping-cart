@@ -5,6 +5,7 @@ import products from "../data/products";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import FilterNav from "../components/FilterNav";
 
 const Store = () => {
   const [showProducts, setShowProducts] = useState(products);
@@ -31,8 +32,8 @@ const Store = () => {
 
   return (
     <Container className="mb-5">
-      <div className="storePage">
-        <h1>Store</h1>
+      <div className="storePage mt-3">
+        {/* <h1>Store</h1> */}
         <CategoryNav
           showAll={showAll}
           showFurniture={showFurniture}
@@ -40,13 +41,20 @@ const Store = () => {
           showElectronics={showElectronics}
           showAppliances={showAppliances}
         />
-          <Row xs={1} sm={2} md={3} lg={4} className="g-5">
-            {showProducts.map((item) => (
-              <Col key={item.id}>
-                <ItemCard {...item} />
-              </Col>
-            ))}
-          </Row>
+        <Row>
+            <Col xs={3}>
+              <FilterNav />
+            </Col>
+            <Col>
+              <Row xs={1} sm={2} md={3} lg={4} className="g-5">
+                {showProducts.map((item) => (
+                  <Col key={item.id}>
+                    <ItemCard {...item} />
+                  </Col>
+                ))}
+              </Row>
+            </Col>
+        </Row>
       </div>
     </Container>
   );

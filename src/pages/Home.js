@@ -14,10 +14,12 @@ const Home = () => {
       
 
       {/* <Container className="mt-5"> */}
-        <CategoryStrip category={"furniture"}/>
-        <CategoryStrip category={"clothes"}/>
-        <CategoryStrip category={"electronics"}/>
-        <CategoryStrip category={"appliances"}/>
+        <div class="mt-5">
+          <CategoryStrip category={"furniture"}/>
+          <CategoryStrip category={"clothes"}/>
+          <CategoryStrip category={"electronics"}/>
+          <CategoryStrip category={"appliances"}/>
+        </div>
       </Container>
     </div>
   );

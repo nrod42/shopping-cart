@@ -42,6 +42,7 @@ const ItemCard = ({ id, title, price, imgUrl }) => {
       setShow((current) => !current);
     }, 2000);
     addToCart(parseInt(itemQty));
+    
   };
 
   // const tooltipTimeout = () => {
