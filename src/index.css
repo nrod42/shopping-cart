@@ -14,3 +14,9 @@ html, body, #root, .App {
 #cartBtn:hover {
     background-color: #912F40 !important;
 }
+
+.accordion-button:not(.collapsed) {
+    background-color: #912F40 !important;
+    color: white !important;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}

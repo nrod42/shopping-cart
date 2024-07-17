@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-import Slider from "rc-slider";
+import Form from 'react-bootstrap/Form'
+// import Slider from "rc-slider";
 // import RangeSlider from 'react-bootstrap-range-slider';
 
 const FilterNav = () => {
@@ -16,7 +17,7 @@ const FilterNav = () => {
         <Accordion.Item eventKey="0">
           <Accordion.Header>Price</Accordion.Header>
           <Accordion.Body>
-            <div style={{ width: "80%", margin: "0 auto" }}>
+            {/* <div style={{ width: "80%", margin: "0 auto" }}>
               <Slider.Range
                 min={0}
                 max={1000}
@@ -28,7 +29,7 @@ const FilterNav = () => {
                 <span>${values[0]}</span>
                 <span>${values[1]}</span>
               </div>
-            </div>
+            </div> */}
             {/* <label for="customRange1" className="form-label">Example range</label>
             <input type="range" className="form-range" id="customRange1"></input> */}
           </Accordion.Body>
@@ -36,13 +37,15 @@ const FilterNav = () => {
         <Accordion.Item eventKey="1">
           <Accordion.Header>Color</Accordion.Header>
           <Accordion.Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          <Form>
+            <div key={`default-checkbox}`} className="mb-3">
+              <Form.Check 
+                type='checkbox'
+                id={`default-checkbox`}
+                label={`default checkbox`}
+              />
+            </div>
+          </Form>
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
@@ -51,10 +54,7 @@ const FilterNav = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
             minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>

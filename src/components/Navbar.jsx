@@ -41,6 +41,7 @@ const Navbar = () => {
           width: "3rem",
           position: "relative",
           textAlign: "center",
+            
           borderColor: "#912F40",
         }}
         variant="outline-primary"

@@ -31,31 +31,30 @@ const Store = () => {
   };
 
   return (
-    <Container className="mb-5">
-      <div className="storePage mt-3">
-        {/* <h1>Store</h1> */}
-        <CategoryNav
-          showAll={showAll}
-          showFurniture={showFurniture}
-          showClothes={showClothes}
-          showElectronics={showElectronics}
-          showAppliances={showAppliances}
-        />
-        <Row>
-            <Col xs={3}>
-              <FilterNav />
-            </Col>
-            <Col>
-              <Row xs={1} sm={2} md={3} lg={4} className="g-5">
-                {showProducts.map((item) => (
-                  <Col key={item.id}>
-                    <ItemCard {...item} />
-                  </Col>
-                ))}
-              </Row>
-            </Col>
-        </Row>
-      </div>
+    <Container className="mb-5 storePage mt-3">
+      <Row>
+        <Col xs={2}>
+          <FilterNav />
+        </Col>
+        <Col xs={10}>
+          <Row>
+            <CategoryNav
+              showAll={showAll}
+              showFurniture={showFurniture}
+              showClothes={showClothes}
+              showElectronics={showElectronics}
+              showAppliances={showAppliances}
+            />
+          </Row>
+          <Row xs={1} sm={2} md={3} lg={4} className="g-5">
+            {showProducts.map((item) => (
+              <Col key={item.id}>
+                <ItemCard {...item} />
+              </Col>
+            ))}
+          </Row>
+        </Col>
+      </Row>
     </Container>
   );
 };

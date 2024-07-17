@@ -15,7 +15,7 @@ const CategoryNav = ({
       style={{
         display: "flex",
         width: "100%", // Ensure the Nav component takes up the full width
-        // height: "4rem",
+        textAlign: "center"
       }}
     >
       <Nav.Item style={{ flex: "1" }}>
